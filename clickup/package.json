@@ -1,13 +1,16 @@
 {
   "id": "clickup",
   "name": "ClickUp",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ClickUp",
   "main": "index.js",
-  "author": "Angled Crown <karthikeyan@angledcrown.com>",
+  "author": "Angled Crown",
   "license": "MIT",
   "config": {
     "serviceURL": "https://app.clickup.com",
-    "hasNotificationSound": true
+    "hasTeamId": false,
+    "hasCustomUrl": false,
+    "hasNotificationSound": false,
+    "hasIndirectMessages": false
   }
 }

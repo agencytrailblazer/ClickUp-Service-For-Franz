@@ -1,16 +1,9 @@
-// orat.io integration
+"use strict";
+
 module.exports = (Franz) => {
-  function getMessages() {
-    let direct = 0;
-    let indirect = 0;
-    const FranzData = document.querySelector('#FranzMessages').dataset;
-    if (FranzData) {
-      direct = FranzData.direct;
-      indirect = FranzData.indirect;
-    }
-
-    Franz.setBadge(direct, indirect);
+  const getMessages = () => {
+    const unreadNotifications = document.querySelectorAll('.cu-notification-alert__dot');
+    Franz.setBadge(0, (unreadNotifications.length >= 1) ? 1 : 0);
   }
-
   Franz.loop(getMessages);
 }
